@@ -1,0 +1,49 @@
+syntax = "proto2";
+
+package cloudgosight.api.user;
+
+import "api.proto";
+
+option go_package = "/user";
+
+message UserLoginRequest {
+  required string email = 1;
+  required string password = 2;
+}
+
+message UserLoginResponse {
+  required int32 code = 1;
+}
+
+message UserLogoutRequest {
+}
+
+message UserLogoutResponse {
+}
+
+message UserRegisterRequest {
+  required string email = 1;
+  required string password = 2;
+}
+
+message UserRegisterResponse {
+  required int32 code = 1;
+}
+
+message GetSelfInfoRequest {
+}
+
+message GetSelfInfoResponse {
+}
+
+
+
+
+service UserService {
+
+  rpc Login (UserLoginRequest) returns (UserLoginResponse);
+  rpc Logout (UserLogoutRequest) returns (UserLogoutResponse);
+  rpc Register (UserRegisterRequest) returns (UserRegisterResponse);
+  rpc GetSelfInfo (GetSelfInfoRequest) returns (GetSelfInfoResponse);
+
+}
