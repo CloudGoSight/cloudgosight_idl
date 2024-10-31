@@ -4,7 +4,7 @@ package cloudgosight.api.user;
 
 import "api.proto";
 
-option go_package = "/user";
+option go_package = "/";
 
 message UserLoginRequest {
   required string email = 1;
