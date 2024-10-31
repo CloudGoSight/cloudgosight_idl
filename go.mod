@@ -1,4 +1,4 @@
-module github.com/GloudGoSight/cloudgosight_idl
+module github.com/CloudGoSight/cloudgosight_idl
 
 go 1.22
 
